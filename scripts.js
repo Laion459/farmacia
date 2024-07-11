@@ -33,12 +33,12 @@ const produtos = [
     {
         nome: 'Protetor Solar FPS 30',
         imagem: 'img/protetor-solar.jpg',
-        descricao: 'Protege a pele dos raios solares UVA e UVB.'
+        descricao: 'Protege a pele dos raios solares UVA.'
     },
     {
         nome: 'Shampoo Anticaspa',
         imagem: 'img/shampoo-anticaspa.jpg',
-        descricao: 'Combate a caspa e a oleosidade capilar.'
+        descricao: 'Combate a caspa e a oleosidade.'
     },
     {
         nome: 'Suplemento Vitamínico',
@@ -57,12 +57,15 @@ const productsGrid = document.querySelector('.products-grid');
 function carregarProdutos() {
     produtos.forEach(produto => {
         let produtoHTML = `
+            <div class="zoom-img">
             <div class="product">
                 <img src="${produto.imagem}" alt="${produto.nome}">
                 <h3>${produto.nome}</h3>
                 <p>${produto.descricao}</p>
                 <a href="#" class="btn">Comprar</a> 
             </div>
+        </div>
+            
         `;
         productsGrid.innerHTML += produtoHTML;
     });

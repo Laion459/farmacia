@@ -133,6 +133,16 @@ nav a:hover {
     gap: 20px;
 }
 
+
+.btn {
+    transition: transform 0.3s ease;
+}
+
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
 /* Formulário de Contato */
 form {
     display: flex;
