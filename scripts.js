@@ -5,7 +5,7 @@ document.getElementById("anoAtual").textContent = new Date().getFullYear();
 // Botão Voltar ao Topo
 const voltarTopoBtn = document.getElementById("voltarTopo");
 
-window.onscroll = function() {
+window.onscroll = function () {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         voltarTopoBtn.style.display = "block";
     } else {
@@ -13,24 +13,43 @@ window.onscroll = function() {
     }
 };
 
-voltarTopoBtn.addEventListener("click", function() {
-    document.body.scrollTop = 0; 
-    document.documentElement.scrollTop = 0; 
+voltarTopoBtn.addEventListener("click", function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 });
 
 // Dados dos produtos - Simulando um banco de dados
 const produtos = [
     {
         nome: 'Analgésico Comum',
-        imagem: 'analgesico.jpg',
+        imagem: 'img/analgesico.jpg',
         descricao: 'Alivia dores de cabeça e no corpo.'
     },
     {
         nome: 'Antialérgico',
-        imagem: 'antialergico.jpg',
+        imagem: 'img/antialergico.jpg',
         descricao: 'Combate sintomas de alergia.'
     },
-    // Adicione mais produtos aqui
+    {
+        nome: 'Protetor Solar FPS 30',
+        imagem: 'img/protetor-solar.jpg',
+        descricao: 'Protege a pele dos raios solares UVA e UVB.'
+    },
+    {
+        nome: 'Shampoo Anticaspa',
+        imagem: 'img/shampoo-anticaspa.jpg',
+        descricao: 'Combate a caspa e a oleosidade capilar.'
+    },
+    {
+        nome: 'Suplemento Vitamínico',
+        imagem: 'img/suplemento.jpg',
+        descricao: 'Complementa a alimentação com vitaminas e minerais essenciais.'
+    },
+    {
+        nome: 'Termômetro Digital',
+        imagem: 'img/termometro.jpg',
+        descricao: 'Mede a temperatura corporal com precisão e rapidez.'
+    }
 ];
 
 // Função para carregar os produtos na página
